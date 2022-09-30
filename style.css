@@ -1,0 +1,135 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Karla', sans-serif;
+    min-height: 100vh;
+    font-size: 16px;
+    background-color: hsl(204, 43%, 93%);
+    display: flex;
+    align-items: center;
+}
+
+.container {
+    margin: 0 auto;
+    max-width: 960px;
+    padding: 1rem;
+}
+
+.wrap {
+    display: grid;
+    grid-template-areas: "description description"
+                         "subscription perks";
+    grid-template-rows: 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
+    border-radius: .5rem;
+    overflow: hidden;
+    box-shadow: 1rem 0 4rem hsl(218, 22%, 67%);
+}
+
+.description {
+    grid-area: description;
+    background-color: white;
+    padding: 3rem 2rem 0rem 2.5rem;
+}
+
+.description h1 {
+    font-weight: 700;
+    font-size: 1.8rem;
+    color: hsl(179, 62%, 43%);
+}
+
+.description h2 {
+    font-size: 1.1rem;
+    margin: 1.5rem 0;
+    color: hsl(71, 73%, 54%);
+}
+
+.description h3 {
+    color: hsl(218, 22%, 67%);
+    line-height: 1.8rem;
+    font-weight: 400;
+    font-size: 1rem;
+    padding-right: 1rem;
+}
+
+.subscription {
+    grid-area: subscription;
+    background-color: hsl(179, 62%, 43%);
+    padding: 2.5rem;
+    color: hsl(204, 43%, 93%);
+}
+
+.subscription h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.subscription .price {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.price span {
+    font-size: 1rem;
+    font-weight: 400;
+    color: hsl(181, 53%, 59%);
+    margin-left: .3rem;
+}
+
+.subscription .access {
+    font-weight: 400;
+    margin-top: 1.5rem;
+}
+
+.subscription a {
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    margin-top: 2.2rem;
+    padding: 1rem;
+    border-radius: .5rem;
+    background-color: hsl(71, 73%, 54%);
+    color: hsl(204, 43%, 93%);
+    font-weight: 700;
+
+}
+
+.perks {
+    grid-area: perks;
+    background-color: hsl(179, 47%, 52%);
+    padding: 2.5rem 4rem 2.5rem 2.5rem;
+    color: hsl(204, 43%, 93%);
+}
+
+.perks h3 {
+    margin-bottom: 1rem;
+    font-weight: 700;
+    font-size: 1.2rem;
+}
+
+.perks li {
+    line-height: 1.5rem;
+    list-style: none;
+    font-size: .9rem;
+    font-weight: 400;
+}
+
+@media only screen and (max-width: 450px) {
+    .wrap {
+        grid-template-columns: 100%;
+        grid-template-areas: "description"
+            "subscription"
+            "perks";
+    }
+
+    .description {
+        padding-bottom: 2rem;
+    }
+}
